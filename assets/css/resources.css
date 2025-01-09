@@ -1,0 +1,227 @@
+.htk-resources-container {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+/* Resource Categories */
+.htk-resources-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.htk-resource-category {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 25px;
+}
+
+.htk-resource-category h2 {
+    margin-top: 0;
+    color: #1d2327;
+    border-bottom: 2px solid #2271b1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.category-description {
+    color: #646970;
+    margin-bottom: 20px;
+}
+
+/* Resource Cards */
+.htk-resource-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.htk-resource-card {
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.htk-resource-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.htk-resource-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2271b1;
+}
+
+.htk-resource-card p {
+    margin-bottom: 15px;
+    color: #646970;
+}
+
+.htk-resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.htk-resource-type {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #e9ecef;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #646970;
+    text-transform: capitalize;
+}
+
+/* Mentor Section */
+.htk-mentor-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.htk-mentor-section h2 {
+    margin-top: 0;
+    color: #1d2327;
+    border-bottom: 2px solid #2271b1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+.htk-form {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.htk-form-row {
+    margin-bottom: 20px;
+}
+
+.htk-form-row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.htk-form-row select,
+.htk-form-row textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.htk-form-row textarea {
+    min-height: 120px;
+}
+
+/* Messages */
+.htk-message {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.htk-message.success {
+    background: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.htk-message.error {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+/* Resource Type Colors */
+.htk-resource-type.tool {
+    background: #cff4fc;
+    color: #055160;
+}
+
+.htk-resource-type.library {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.htk-resource-type.documentation {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+.htk-resource-type.tutorial {
+    background: #e2e3e5;
+    color: #41464b;
+}
+
+.htk-resource-type.community {
+    background: #f8d7da;
+    color: #842029;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .htk-resource-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .htk-form {
+        max-width: 100%;
+    }
+    
+    .htk-resource-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+/* Filters */
+.htk-resource-filters {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.htk-resource-filters select {
+    min-width: 200px;
+}
+
+/* Loading States */
+.htk-loading {
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.htk-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 2px solid #2271b1;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: htk-spin 1s linear infinite;
+}
+
+@keyframes htk-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

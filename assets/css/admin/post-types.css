@@ -1,0 +1,124 @@
+/* Meta Box Styles */
+.htk-meta-box {
+    padding: 12px;
+}
+
+.htk-meta-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.htk-media-upload {
+    margin-top: 10px;
+}
+
+.htk-media-preview {
+    margin-bottom: 10px;
+    max-width: 200px;
+}
+
+.htk-media-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.htk-team-members {
+    margin: 10px 0;
+}
+
+.htk-team-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+/* Modal Styles */
+.htk-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 160000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.htk-modal-content {
+    background: #fff;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.htk-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.htk-modal-header h2 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.htk-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    color: #666;
+}
+
+.htk-modal-body {
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.htk-participant-search {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+.htk-participant-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.htk-participant-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.htk-participant-item:hover {
+    background-color: #f0f0f1;
+}
+
+.htk-loading,
+.htk-no-results,
+.htk-error {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.htk-error {
+    color: #d63638;
+} 

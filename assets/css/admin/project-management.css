@@ -1,0 +1,238 @@
+/* Project Management Container */
+.htk-project-management {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Navigation */
+.htk-project-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.htk-nav-item {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #646970;
+}
+
+.htk-nav-item.active {
+    color: #2271b1;
+    border-bottom: 2px solid #2271b1;
+}
+
+/* Tab Content */
+.htk-tab-content {
+    display: none;
+}
+
+.htk-tab-content.active {
+    display: block;
+}
+
+/* Task Board */
+.htk-task-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.htk-task-column {
+    background: #f0f0f1;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.htk-task-column h3 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2271b1;
+}
+
+.htk-task-list {
+    min-height: 200px;
+}
+
+.htk-task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: move;
+}
+
+.htk-task-placeholder {
+    border: 2px dashed #ccc;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Ideas Grid */
+.htk-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.htk-idea-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+/* Timeline */
+.htk-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.htk-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #ddd;
+}
+
+.htk-timeline-event {
+    position: relative;
+    margin-bottom: 30px;
+    width: 50%;
+    padding-right: 30px;
+}
+
+.htk-timeline-event:nth-child(even) {
+    margin-left: 50%;
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.htk-event-marker {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2271b1;
+}
+
+.htk-timeline-event:nth-child(even) .htk-event-marker {
+    right: auto;
+    left: -6px;
+}
+
+.htk-event-content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+/* Modal Styles */
+.htk-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 160000;
+}
+
+.htk-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.htk-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.htk-modal-header h2 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.htk-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    color: #666;
+}
+
+.htk-modal-body {
+    padding: 15px;
+}
+
+/* Form Styles */
+.htk-form-row {
+    margin-bottom: 15px;
+}
+
+.htk-form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.htk-form-row input[type="text"],
+.htk-form-row textarea,
+.htk-form-row select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.htk-form-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .htk-task-board {
+        grid-template-columns: 1fr;
+    }
+
+    .htk-timeline-event {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 30px;
+        margin-left: 0 !important;
+    }
+
+    .htk-timeline::before {
+        left: 0;
+    }
+
+    .htk-event-marker {
+        left: -6px !important;
+        right: auto !important;
+    }
+} 

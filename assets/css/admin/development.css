@@ -1,0 +1,230 @@
+.htk-development {
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+.htk-dev-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Sidebar */
+.htk-dev-sidebar {
+    grid-row: span 2;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.htk-template-category {
+    margin-bottom: 20px;
+}
+
+.htk-template-category h3 {
+    margin: 0 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2271b1;
+}
+
+.htk-template-item {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.htk-template-item:hover {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.htk-template-item h4 {
+    margin: 0 0 5px;
+}
+
+.htk-template-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #646970;
+}
+
+.htk-git-integration {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.htk-git-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.htk-git-output {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    max-height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+/* Main Editor Area */
+.htk-dev-main {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.htk-editor-controls {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#htk-code-editor {
+    flex: 1;
+    min-height: 600px;
+}
+
+/* Debug Console */
+.htk-dev-console {
+    grid-column: 2;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.htk-console-header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.htk-console-header h2 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.htk-console-output {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.htk-console-output .error {
+    color: #f14c4c;
+}
+
+.htk-console-output .success {
+    color: #4caf50;
+}
+
+.htk-console-output .info {
+    color: #2196f3;
+}
+
+/* Modal Styles */
+.htk-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 160000;
+}
+
+.htk-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.htk-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.htk-modal-header h2 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.htk-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    color: #666;
+}
+
+.htk-modal-body {
+    padding: 15px;
+}
+
+/* Form Styles */
+.htk-form-row {
+    margin-bottom: 15px;
+}
+
+.htk-form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.htk-form-row textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.htk-form-actions {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .htk-dev-container {
+        grid-template-columns: 1fr;
+    }
+
+    .htk-dev-sidebar {
+        grid-row: auto;
+    }
+
+    .htk-dev-console {
+        grid-column: 1;
+    }
+} 

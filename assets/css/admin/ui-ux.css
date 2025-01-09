@@ -1,0 +1,324 @@
+:root {
+    /* MIT Reality Hackathon Colors */
+    --htk-primary: #0066cc;
+    --htk-secondary: #00a3e0;
+    --htk-accent: #ff6b6b;
+    --htk-background: #f8f9fa;
+    --htk-text: #1d2327;
+    --htk-text-light: #646970;
+    --htk-border: #ddd;
+    
+    /* Font Sizes */
+    --htk-font-small: 14px;
+    --htk-font-medium: 16px;
+    --htk-font-large: 18px;
+}
+
+/* High Contrast Mode */
+.htk-high-contrast {
+    --htk-primary: #0000ff;
+    --htk-secondary: #008000;
+    --htk-accent: #ff0000;
+    --htk-background: #ffffff;
+    --htk-text: #000000;
+    --htk-text-light: #333333;
+    --htk-border: #000000;
+}
+
+/* Font Size Classes */
+.htk-font-small {
+    font-size: var(--htk-font-small);
+}
+
+.htk-font-medium {
+    font-size: var(--htk-font-medium);
+}
+
+.htk-font-large {
+    font-size: var(--htk-font-large);
+}
+
+/* Global Styles */
+.htk-admin-page {
+    background: var(--htk-background);
+    color: var(--htk-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Navigation */
+.htk-nav {
+    background: #fff;
+    border-bottom: 2px solid var(--htk-primary);
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.htk-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.htk-nav-item {
+    margin: 0;
+}
+
+.htk-nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: var(--htk-text);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s ease;
+}
+
+.htk-nav-link:hover,
+.htk-nav-link.active {
+    color: var(--htk-primary);
+    border-bottom-color: var(--htk-primary);
+}
+
+/* Cards */
+.htk-card {
+    background: #fff;
+    border: 1px solid var(--htk-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.htk-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+.htk-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.htk-button-primary {
+    background: var(--htk-primary);
+    color: #fff;
+}
+
+.htk-button-secondary {
+    background: var(--htk-secondary);
+    color: #fff;
+}
+
+.htk-button-accent {
+    background: var(--htk-accent);
+    color: #fff;
+}
+
+.htk-button:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+}
+
+/* Forms */
+.htk-form-group {
+    margin-bottom: 20px;
+}
+
+.htk-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--htk-text);
+}
+
+.htk-form-input,
+.htk-form-select,
+.htk-form-textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--htk-border);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--htk-text);
+    transition: border-color 0.2s ease;
+}
+
+.htk-form-input:focus,
+.htk-form-select:focus,
+.htk-form-textarea:focus {
+    border-color: var(--htk-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+/* Toggle Switch */
+.htk-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.htk-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.htk-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.htk-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.htk-toggle input:checked + .htk-toggle-slider {
+    background-color: var(--htk-primary);
+}
+
+.htk-toggle input:checked + .htk-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Feedback Widget */
+.htk-feedback-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.htk-feedback-toggle {
+    background: var(--htk-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.htk-feedback-toggle:hover {
+    transform: scale(1.1);
+}
+
+.htk-feedback-form {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.htk-feedback-form.active {
+    display: block;
+}
+
+/* Notifications */
+.htk-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.htk-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.htk-notification.success {
+    background: #4caf50;
+    color: #fff;
+}
+
+.htk-notification.error {
+    background: #f44336;
+    color: #fff;
+}
+
+.htk-notification.info {
+    background: var(--htk-primary);
+    color: #fff;
+}
+
+/* Accessibility */
+.htk-skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--htk-primary);
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s ease;
+}
+
+.htk-skip-link:focus {
+    top: 0;
+}
+
+/* Focus Styles */
+*:focus {
+    outline: 2px solid var(--htk-primary);
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .htk-nav-list {
+        flex-direction: column;
+    }
+    
+    .htk-nav-link {
+        padding: 12px 16px;
+    }
+    
+    .htk-card {
+        padding: 15px;
+    }
+    
+    .htk-feedback-form {
+        width: 100%;
+        right: 0;
+        bottom: 70px;
+    }
+} 

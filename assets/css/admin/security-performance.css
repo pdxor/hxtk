@@ -1,0 +1,164 @@
+.htk-security-performance {
+    padding: 20px;
+}
+
+.htk-security-performance h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Security Options */
+.htk-security-options {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.htk-option-group {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.htk-option-group:last-child {
+    border-bottom: none;
+}
+
+.htk-option-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.htk-option-description {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* Performance Metrics */
+.htk-performance-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.htk-metric-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.htk-metric-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.htk-metric-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+/* Security Scan Results */
+.htk-scan-results {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.htk-issue {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid;
+    background: #f8f8f8;
+}
+
+.htk-issue.error {
+    border-color: #dc3232;
+}
+
+.htk-issue.warning {
+    border-color: #ffb900;
+}
+
+.htk-issue.success {
+    border-color: #46b450;
+}
+
+.htk-issue-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.htk-issue-description {
+    color: #666;
+    font-size: 13px;
+}
+
+/* Action Buttons */
+.htk-action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.htk-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+.htk-button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.htk-button-secondary {
+    background: #f6f7f7;
+    border-color: #2271b1;
+    color: #2271b1;
+}
+
+.htk-button:hover {
+    opacity: 0.9;
+}
+
+/* Loading States */
+.htk-loading {
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.htk-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: htk-spin 1s linear infinite;
+}
+
+@keyframes htk-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
